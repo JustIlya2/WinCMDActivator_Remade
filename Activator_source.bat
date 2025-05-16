@@ -1,38 +1,17 @@
-@ECHO OFF
-REM BFCPEOPTIONSTART
-REM Advanced BAT to EXE Converter www.BatToExeConverter.com
-REM BFCPEEXE=
-REM BFCPEICON=
-REM BFCPEICONINDEX=-1
-REM BFCPEEMBEDDISPLAY=0
-REM BFCPEEMBEDDELETE=1
-REM BFCPEADMINEXE=0
-REM BFCPEINVISEXE=0
-REM BFCPEVERINCLUDE=0
-REM BFCPEVERVERSION=1.0.0.0
-REM BFCPEVERPRODUCT=Product Name
-REM BFCPEVERDESC=Product Description
-REM BFCPEVERCOMPANY=Your Company
-REM BFCPEVERCOPYRIGHT=Copyright Info
-REM BFCPEWINDOWCENTER=1
-REM BFCPEDISABLEQE=0
-REM BFCPEWINDOWHEIGHT=30
-REM BFCPEWINDOWWIDTH=120
-REM BFCPEWTITLE=Window Title
-REM BFCPEOPTIONEND
+
 @echo off
 
-chcp 65001
+chcp 1251
 
-Echo Добро пожаловать!
+Echo Р”РѕР±СЂРѕ РїРѕР¶Р°Р»РѕРІР°С‚СЊ!
 
 :start
 
-echo Выберете издание из списка ниже написав его также, как в списке:
+echo Р’С‹Р±РµСЂРµС‚Рµ РёР·РґР°РЅРёРµ РёР· СЃРїРёСЃРєР° РЅРёР¶Рµ РЅР°РїРёСЃР°РІ РµРіРѕ С‚Р°РєР¶Рµ, РєР°Рє РІ СЃРїРёСЃРєРµ:
 
 echo  Pro/Enterprise/Home/Education
 
-set /p edition="Твоё издание: "
+set /p edition="РўРІРѕС‘ РёР·РґР°РЅРёРµ: "
 
 if not defined edition goto incorrect
 
@@ -44,7 +23,7 @@ if %edition% == "Enterprise" goto work_harder
 
 if %edition% == "Education" goto why
 
-echo Неправильный ввод! Нажмите любую клавишу чтобы вернуться...
+echo РќРµРїСЂР°РІРёР»СЊРЅС‹Р№ РІРІРѕРґ! РќР°Р¶РјРёС‚Рµ Р»СЋР±СѓСЋ РєР»Р°РІРёС€Сѓ С‡С‚РѕР±С‹ РІРµСЂРЅСѓС‚СЊСЃСЏ...
 
 pause >nul
 
@@ -52,7 +31,7 @@ goto start
 
 :incorrect
 
-echo Неправильный ввод! Нажмите любую клавишу чтобы вернуться...
+echo РќРµРїСЂР°РІРёР»СЊРЅС‹Р№ РІРІРѕРґ! РќР°Р¶РјРёС‚Рµ Р»СЋР±СѓСЋ РєР»Р°РІРёС€Сѓ С‡С‚РѕР±С‹ РІРµСЂРЅСѓС‚СЊСЃСЏ...
 
 pause >nul
 
@@ -60,7 +39,7 @@ goto start
 
 :Pro
 
-echo Активация Pro издания...
+echo РђРєС‚РёРІР°С†РёСЏ Pro РёР·РґР°РЅРёСЏ...
 
 slmgr /ipk W269N-WFGWX-YVC9B-4J6C9-T83GX
 
@@ -74,7 +53,7 @@ exit
 
 :who_even_using_this
 
-echo Активация Home издания...
+echo РђРєС‚РёРІР°С†РёСЏ Home РёР·РґР°РЅРёСЏ...
 
 slmgr /ipk YTMG3-N6DKC-DKB77-7M9GH-8HVX7
 
@@ -88,7 +67,7 @@ exit
 
 :work_harder
 
-echo Активация Enterprise издания...
+echo РђРєС‚РёРІР°С†РёСЏ Enterprise РёР·РґР°РЅРёСЏ...
 
 slmgr /ipk NPPR9-FWDCX-D2C8J-H872K-2YT43
 
@@ -102,7 +81,7 @@ exit
 
 :why
 
-echo Активация Education издания...
+echo РђРєС‚РёРІР°С†РёСЏ Education РёР·РґР°РЅРёСЏ...
 
 slmgr /ipk NW6C2-QMPVW-D7KKK-3GKT6-VCFB2
 
@@ -113,5 +92,6 @@ slmgr /ato
 pause 
 
 exit
+
 
 
