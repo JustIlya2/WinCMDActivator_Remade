@@ -15,13 +15,13 @@ set /p edition="Твоё издание: "
 
 if not defined edition goto incorrect
 
-if %edition% == "Pro" goto Pro
+if %edition% == Pro goto Pro
 
-if %edition% == "Home" goto who_even_using_this
+if %edition% == Home goto who_even_using_this
 
-if %edition% == "Enterprise" goto work_harder
+if %edition% == Enterprise goto work_harder
 
-if %edition% == "Education" goto why
+if %edition% == Education goto why
 
 echo Неправильный ввод! Нажмите любую клавишу чтобы вернуться...
 
